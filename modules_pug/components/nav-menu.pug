@@ -1,0 +1,13 @@
+//Este componente es la parte del menu del heder de la pagina.
+-
+    //Arreglo con los items para generar el menu.
+    const itemsMenu = ['Inicio','Acerca de','Prodcutos','Testimonio','Contacto'];
+.header-container-nav
+    nav.header-nav
+        ul.list-items
+            each item in itemsMenu
+                li.item-list
+                    - 
+                        let href = '#'+item; 
+                        href=href.replace(" ","-");
+                    a(href= href).item-link= item

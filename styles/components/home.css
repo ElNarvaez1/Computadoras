@@ -1,0 +1,30 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../../img/75285388_2497827903637744_7038377676502509464_n.jpg);
+  height: 100vh;
+  margin: 0 auto 50px auto; }
+  .home .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; }
+  .home .container-info,
+  .home .container-button {
+    width: calc(50% - 5px);
+    height: 100%; }
+  .home .container-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; }
+  .home h1, .home h3 {
+    color: var(--color-white);
+    text-align: left; }
+  .home h3 {
+    margin: 0; }
+  .home .button-home {
+    background: var(--color-bg-button);
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px; }

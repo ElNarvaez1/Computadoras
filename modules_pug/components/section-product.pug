@@ -1,0 +1,41 @@
+//Arreglo con las rutas de las imagenes que pondremos
+-
+    const imagesPath=[
+        'img/1366_2000.jpg',
+        'img/1366_2000vcb fx.jpg',
+        'img/69038878_107807990478866_5296475686597960828_n.jpg',
+        'img/75285388_2497827903637744_7038377676502509464_n.jpg',
+        'img/75523336_831267313942908_1016024196390265874_n.jpg',
+        'img/75223560_2537331383167929_1821426668836159589_n.jpg',
+        'img/1366_2000.jpg',
+        'img/1366_2000vcb fx.jpg',
+        'img/69038878_107807990478866_5296475686597960828_n.jpg',
+        'img/75285388_2497827903637744_7038377676502509464_n.jpg',
+        'img/75523336_831267313942908_1016024196390265874_n.jpg',
+        'img/75223560_2537331383167929_1821426668836159589_n.jpg',
+        'img/1366_2000.jpg',
+        'img/1366_2000vcb fx.jpg',
+        'img/69038878_107807990478866_5296475686597960828_n.jpg',
+        'img/75285388_2497827903637744_7038377676502509464_n.jpg',
+        'img/75523336_831267313942908_1016024196390265874_n.jpg',
+        'img/75223560_2537331383167929_1821426668836159589_n.jpg',
+    ]
+.container-products
+    h2.products-title= itemsMenu[2]
+    p.products-p Estas son algunas de las computadoras que hemos ensamblado para nuestros clientes.
+    .products
+        each imge,index in imagesPath
+            //JS 
+            -
+                const columns = 2; 
+                const rows = 2;
+                let randomColumns = Number(Math.round(Math.random() * columns ))
+                let randomRows = Number(Math.round(Math.random() * rows ))
+                if(randomColumns==0)
+                    randomColumns++;
+                if(randomRows==0)
+                    randomRows++;        
+                let className = 'product span-' +randomColumns+'-'+randomRows
+            div(class= [className])
+                img(src= imge, alt= imge)
+    a.button-m-products(href="#") Mas productos                   

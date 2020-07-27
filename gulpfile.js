@@ -4,7 +4,7 @@
 */
 const gulp = require('gulp'),
     sass = require('gulp-sass'),
-    autoplefixer = require('gulp-autoprefixer'),
+    autoprefixer = require('gulp-autoprefixer'),
     pug = require('gulp-pug');
 const { watch } = require('gulp');
 
@@ -15,9 +15,9 @@ const paths = {
         watch: './modules_pug/**/*.pug'
     },
     sass: {
-        src: 'modules_scss/**/*.scss',
+        src: 'modules_sass/**/*.scss',
         dest: 'styles/',
-        watch: 'modules_scss/**/*.scss'
+        watch: 'modules_sass/**/*.scss'
     }
 
 }
@@ -40,10 +40,8 @@ function compileSass() {
     return gulp.src(paths.sass.src)
     .pipe(sass(
         //Opciones para identitar el codigo
-        {
-            outputStyle: "expended"
-        }))
-    .pipe(autoplefixer())
+        {outputStyle: "expended"}))
+    .pipe(autoprefixer())
     .pipe(gulp.dest(paths.sass.dest))
 }
 

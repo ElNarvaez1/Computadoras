@@ -1,0 +1,39 @@
+@mixin flexbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header {
+    height: var(--size-header-height);
+    
+    .section{
+        margin:0;
+        height: 100%;
+    }
+    .container{
+        height: 100%;
+    }
+    .container-logo{
+        @include flexbox();
+        h2{
+            margin:0;
+        }
+    }
+    .container,
+    .list-items{
+        @include flexbox();
+    }
+    .list-items .item-list{
+        list-style: none;
+        margin-left: 10px;
+    }
+    .logo,
+    .item-link{
+        color:var(--color-white);
+        height: 100%;
+    }
+    .item-link{
+        text-decoration: none;
+        padding: 10px;
+    }
+}

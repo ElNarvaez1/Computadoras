@@ -1,0 +1,37 @@
+@mixin flexbox($jf,$al){
+    display: flex;
+    justify-content: $jf;
+    align-items: $al;
+}
+.home{
+    @include flexbox(center,center);
+    background:   url(../../img/75285388_2497827903637744_7038377676502509464_n.jpg) ;
+    height: 100vh;
+    margin: 0 auto 50px auto;
+    .container{
+        @include flexbox(space-between,flex-end);
+    }
+    .container-info,
+    .container-button{
+        width: calc(50% - 5px);
+        height: 100%;
+    }
+    .container-button{
+        @include flexbox(flex-end,flex-end);
+    }
+    h1,h3{
+        color:var(--color-white);
+        text-align: left;
+    }
+    h3{
+        margin: 0;
+    }
+    .button-home{
+        background: var(--color-bg-button);
+        color:#000;
+        text-decoration: none;
+        padding:10px;
+        border-radius:5px;
+    }
+    
+}

@@ -1,0 +1,32 @@
+include ../factory/factory-testimonial
+-
+    const persons=[
+        {
+            name:'Nombre Apellido',
+            img:'75223560_2537331383167929_1821426668836159589_n.jpg',
+            descp:'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'+
+                    'sed do eiusmod tempor'     
+        },
+        {
+            name:'Nombre Apellido2',
+            img:'75223560_2537331383167929_1821426668836159589_n.jpg',
+            descp:'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'+
+                    'sed do eiusmod tempor'     
+        },
+        {
+            name:'Nombre Apellido3',
+            img:'75223560_2537331383167929_1821426668836159589_n.jpg',
+            descp:'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'+
+                    'sed do eiusmod tempor'      
+        },
+        {
+            name:'Nombre Apellido4',
+            img:'75223560_2537331383167929_1821426668836159589_n.jpg',
+            descp:'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'+
+                    'sed do eiusmod tempor'      
+        }
+    ]
+h2 Testimonial    
+each person in persons
+    +createTestimonialCard(person.name, 'img/'+person.img, person.descp)
+        

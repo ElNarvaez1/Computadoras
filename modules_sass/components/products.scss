@@ -1,0 +1,35 @@
+.section.computers{
+    .container{
+        max-width:100%;
+        width: 100%;
+        
+    }
+    .container-products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .button-m-products{
+        margin: 30px auto;
+    }
+    .products-title,
+    .products-p,
+    .container-products{
+        width: 100%;
+    }
+    .products{
+        display: grid;
+        grid-template-rows: repeat(6,160px);
+        grid-template-columns: repeat(5,1fr);
+        /* height: 100vh; */
+        @for $row from 1 through 2{
+            @for $column from 1 through 2{
+                .span-#{$column}-#{$row}{
+                    grid-row: span #{$row};
+                    grid-column: span #{$column};
+                }
+            }   
+        }
+    }
+   
+}
