@@ -14,19 +14,20 @@ html(lang="en")
                     //Incluimos la parte del menu.
                     include components/nav-menu   
         main
-            section.section.home
+            section.section.home(id= itemsMenu[0])
                 .container
                     include components/section-home
-            section.section.aboutus
+                span.fill    
+            section.section.aboutus(id= itemsMenu[1])
                 .container
                     include components/section-about
-            section.section.computers
+            section.section.computers(id= itemsMenu[2])
                 .container
                     include components/section-product 
-            section.section.testimonial
+            section.section.testimonial(id= itemsMenu[3])
                 .container
                     include components/section-testimonial
-            section.section.contact
+            section.section.contact(id= itemsMenu[4])
                 .container
                     include components/section-contact    
         footer  

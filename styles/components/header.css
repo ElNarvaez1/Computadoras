@@ -1,5 +1,7 @@
 .header {
-  height: var(--size-header-height); }
+  height: var(--size-header-height);
+  position: relative;
+  z-index: 1000; }
   .header .section {
     margin: 0;
     height: 100%; }
